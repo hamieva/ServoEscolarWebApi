@@ -32,7 +32,7 @@ namespace ServoEscolarWebApi.Datos.Consultas
                 (IdFinal == 0 || a.Id <= IdFinal) &&
                 (string.IsNullOrEmpty(MatriculaInicial) || string.Compare(a.Matricula, MatriculaInicial) >= 0) &&
                 (string.IsNullOrEmpty(MatriculaFinal) || string.Compare(a.Matricula, MatriculaFinal) <= 0) &&
-                (string.IsNullOrEmpty(Nombre) || Nombre.Contains(Nombre, StringComparison.OrdinalIgnoreCase)) &&
+                (string.IsNullOrEmpty(Nombre) || a.Nombre.Contains(Nombre, StringComparison.OrdinalIgnoreCase)) &&
                 (string.IsNullOrEmpty(ApellidoPaterno) || a.ApellidoPaterno.Contains(ApellidoPaterno, StringComparison.OrdinalIgnoreCase)) &&
                 (string.IsNullOrEmpty(ApellidoMaterno) || a.ApellidoMaterno.Contains(ApellidoMaterno, StringComparison.OrdinalIgnoreCase)) &&
                 (string.IsNullOrEmpty(Sexo) || a.Sexo.Equals(Sexo, StringComparison.OrdinalIgnoreCase)) &&

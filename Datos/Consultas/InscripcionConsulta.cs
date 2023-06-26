@@ -37,21 +37,21 @@
 
         protected override Func<Inscripcion, bool> ObtenerConsultaBase()
         {
-            return inscripcion =>
-                (!AlumnoIdMin.HasValue || inscripcion.AlumnoId >= AlumnoIdMin.Value) &&
-                (!AlumnoIdMax.HasValue || inscripcion.AlumnoId <= AlumnoIdMax.Value) &&
-                (!CicloEscolarIdMin.HasValue || inscripcion.CicloEscolarId >= CicloEscolarIdMin.Value) &&
-                (!CicloEscolarIdMax.HasValue || inscripcion.CicloEscolarId <= CicloEscolarIdMax.Value) &&
-                (string.IsNullOrEmpty(Seccion) || inscripcion.Seccion == Seccion) &&
-                (!GradoMin.HasValue || inscripcion.Grado >= GradoMin.Value) &&
-                (!GradoMax.HasValue || inscripcion.Grado <= GradoMax.Value) &&
-                (string.IsNullOrEmpty(Grupo) || inscripcion.Grupo == Grupo) &&
-                (!FechaInscripcionDesde.HasValue || inscripcion.FechaInscripcion >= FechaInscripcionDesde.Value) &&
-                (!FechaInscripcionHasta.HasValue || inscripcion.FechaInscripcion <= FechaInscripcionHasta.Value) &&
-                (!Baja.HasValue || inscripcion.Baja == Baja.Value) &&
-                (!FechaBajaDesde.HasValue || inscripcion.FechaBaja >= FechaBajaDesde.Value) &&
-                (!FechaBajaHasta.HasValue || inscripcion.FechaBaja <= FechaBajaHasta.Value) &&
-                (string.IsNullOrEmpty(TipoIngreso) || inscripcion.TipoIngreso == TipoIngreso);
+            return i =>
+                (!AlumnoIdMin.HasValue || i.AlumnoId >= AlumnoIdMin.Value) &&
+                (!AlumnoIdMax.HasValue || i.AlumnoId <= AlumnoIdMax.Value) &&
+                (!CicloEscolarIdMin.HasValue || i.CicloEscolarId >= CicloEscolarIdMin.Value) &&
+                (!CicloEscolarIdMax.HasValue || i.CicloEscolarId <= CicloEscolarIdMax.Value) &&
+                (string.IsNullOrEmpty(Seccion) || i.Seccion == Seccion) &&
+                (!GradoMin.HasValue || i.Grado >= GradoMin.Value) &&
+                (!GradoMax.HasValue || i.Grado <= GradoMax.Value) &&
+                (string.IsNullOrEmpty(Grupo) || i.Grupo == Grupo) &&
+                (!FechaInscripcionDesde.HasValue || i.FechaInscripcion >= FechaInscripcionDesde.Value) &&
+                (!FechaInscripcionHasta.HasValue || i.FechaInscripcion <= FechaInscripcionHasta.Value) &&
+                (!Baja.HasValue || i.Baja == Baja.Value) &&
+                (!FechaBajaDesde.HasValue || i.FechaBaja >= FechaBajaDesde.Value) &&
+                (!FechaBajaHasta.HasValue || i.FechaBaja <= FechaBajaHasta.Value) &&
+                (string.IsNullOrEmpty(TipoIngreso) || i.TipoIngreso == TipoIngreso);
         }
     }
 }
